@@ -1,0 +1,46 @@
+.header {
+    background: $color-primary;
+}
+
+.header__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size 0;
+
+    a.header__title {
+      &:link, &:visited,
+      &:hover, &:active {
+        color: $white;
+      }
+    }
+}
+
+.header__title {
+    text-decoration: none;
+    position: relative;
+    bottom: $xs-size; // room for 'BETA'
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.beta-tag {
+    font-size: $font-size-xs;
+    color: $color-secondary;
+    position: absolute;
+    right: 0;
+    bottom: -.5rem;
+}
+
+.header__username {
+    color: lighten($color-primary, 20%);
+    display: inline-block;
+    margin-right: 2rem;
+    user-select: none;
+
+    @include media(sm-phone) {
+        display: none;
+    }
+}

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SnippetPage with team snippets link 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container page-header__row"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Your Snippets
+      </h1>
+      <div
+        className="page-header__links"
+      >
+        <Link
+          className="page-header__link"
+          to="/team"
+        >
+          Team snippets »
+        </Link>
+        <Link
+          to="/notes"
+        >
+          <button
+            className="btn btn--tertiary btn--shine"
+          >
+            Notes
+          </button>
+        </Link>
+      </div>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <Connect(AddSnippet) />
+    <Connect(SnippetList) />
+  </div>
+</div>
+`;
+
+exports[`should render SnippetPage without team snippets link 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container page-header__row"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Your Snippets
+      </h1>
+      <div
+        className="page-header__links"
+      >
+        <Link
+          to="/notes"
+        >
+          <button
+            className="btn btn--tertiary btn--shine"
+          >
+            Notes
+          </button>
+        </Link>
+      </div>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <Connect(AddSnippet) />
+    <Connect(SnippetList) />
+  </div>
+</div>
+`;

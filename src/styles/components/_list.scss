@@ -1,0 +1,80 @@
+.snippet-list {
+    margin-bottom: $xl-size;
+
+    @include media(phone) {
+        margin-bottom: $m-size;
+    }
+}
+
+.list-item {
+    background: $off-white;
+    border: 1px solid darken($off-white, 7%);
+    border-top: none;
+    color: $dark-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $m-size $s-size;
+    text-decoration: none;
+    transition: background .3s ease;
+
+    &:hover {
+        background: darken($off-white, 3%);
+    }
+}
+
+.li__shortcut,
+.li__text {
+    color: $gray;
+    display: inline-block;
+    background: $white;
+    padding: $xs-size $s-size;
+    outline: none;
+    transition: box-shadow .2s;
+
+    &:focus {
+        box-shadow: 0 0 .2rem .2rem $color-secondary;
+    }
+
+    // make team snippets non-selectable
+    &:not([contenteditable=true]) {
+        user-select: none;
+    }
+
+    // add margin unless remove button is gone (team page)
+    &:not(:last-child) {
+        margin-right: $m-size;
+    }
+}
+
+.li__shortcut {
+    min-width: 10%;
+    flex: 1 0 0;
+}
+
+.li__text {
+    min-width: 20%;
+    flex: 5 0 0;
+}
+
+.list-item__message {
+    color: $gray;
+    font-size: $font-size-lg;
+    padding: $l-size;
+    text-align: center;
+    margin: 0 auto;
+    background: $off-white;
+}
+
+.team-container {
+    margin-bottom: $l-size;
+}
+
+.team-container__header {
+    @extend .admin-section__header;
+    border-bottom: 2px solid $white;
+}
+
+.team-container__message {
+    @extend .list-item__message;
+}

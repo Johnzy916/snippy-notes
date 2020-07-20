@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DesktopOnly correctly 1`] = `
+<div
+  className="mobile-not-available"
+>
+  This app was built for use on a desktop!
+  <div
+    className="desktop-overlay-img"
+  />
+  If you're on a desktop, please widen the screen.
+</div>
+`;

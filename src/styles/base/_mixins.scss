@@ -1,0 +1,56 @@
+// colors for buttons and shine
+@mixin btn-colors($color, $type: regular) {
+    background: $color;
+    &::before {
+        @if $type == light {
+            background: lighten($color, 80%);
+        } @else {
+            background: lighten($color, 10%);
+        }
+    }
+    &::after {
+        background: rgba($white, .5);;
+    }
+}
+
+// default input
+@mixin default-input {
+    background: $off-white;
+    min-height: 1rem;
+    outline: none;
+    padding: $xs-size $s-size;
+    word-wrap: break-word;
+
+    &::placeholder {
+        color: $light-gray;
+    }
+}
+
+// input highlight
+@mixin input-highlight($color, $size: .2) {
+    outline: none;
+    transition: all .2s;
+
+    &:focus {
+        box-shadow: 0 0 #{$size}rem #{$size}rem $color;
+    }
+}
+
+// media queries
+@mixin media($breakpoint) {
+    @if $breakpoint == sm-phone {
+        @media only screen and (max-width: 34.37em) { @content }; // up to 550px
+    }
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 43.74em) { @content }; // up to 700px
+    }
+    @if $breakpoint == tablet {
+        @media only screen and (min-width: 43.75em) { @content }; // 700px +
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 62.5em) { @content }; // 1000px +
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 100em) { @content }; // 1600px +
+    }
+}

@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BaseIcon 1`] = `
+<svg
+  fill="none"
+  height="24"
+  stroke="blue"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  strokeWidth="2"
+  style={
+    Object {
+      "marginRight": "20px",
+      "minWidth": 24,
+    }
+  }
+  viewBox="0 0 24 24"
+  width="24"
+  xmlns="http://www.w3.org/2000/svg"
+/>
+`;
+
+exports[`should render CloseIcon 1`] = `
+<BaseIcon
+  color="#FFFFFF"
+  pushRight={false}
+>
+  <line
+    x1="18"
+    x2="6"
+    y1="6"
+    y2="18"
+  />
+  <line
+    x1="6"
+    x2="18"
+    y1="6"
+    y2="18"
+  />
+</BaseIcon>
+`;
+
+exports[`should render ErrorIcon 1`] = `
+<BaseIcon
+  color="#F26101"
+>
+  <circle
+    cx="12"
+    cy="12"
+    r="10"
+  />
+  <line
+    x1="12"
+    x2="12"
+    y1="8"
+    y2="12"
+  />
+  <line
+    x1="12"
+    x2="12"
+    y1="16"
+    y2="16"
+  />
+</BaseIcon>
+`;
+
+exports[`should render InfoIcon 1`] = `
+<BaseIcon
+  color="#91BED4"
+>
+  <circle
+    cx="12"
+    cy="12"
+    r="10"
+  />
+  <line
+    x1="12"
+    x2="12"
+    y1="16"
+    y2="12"
+  />
+  <line
+    x1="12"
+    x2="12"
+    y1="8"
+    y2="8"
+  />
+</BaseIcon>
+`;
+
+exports[`should render InfoIcon 2`] = `
+<BaseIcon
+  color="#91BED4"
+>
+  <circle
+    cx="12"
+    cy="12"
+    r="10"
+  />
+  <line
+    x1="12"
+    x2="12"
+    y1="16"
+    y2="12"
+  />
+  <line
+    x1="12"
+    x2="12"
+    y1="8"
+    y2="8"
+  />
+</BaseIcon>
+`;
+
+exports[`should render SuccessIcon 1`] = `
+<BaseIcon
+  color="#31B404"
+>
+  <path
+    d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+  />
+  <polyline
+    points="22 4 12 14.01 9 11.01"
+  />
+</BaseIcon>
+`;
+
+exports[`should render alert template with ErrorIcon 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#304269",
+      "borderRadius": "3px",
+      "boxShadow": "0px 2px 2px 2px rgba(0, 0, 0, 0.03)",
+      "boxSizing": "border-box",
+      "color": "white",
+      "display": "flex",
+      "fontFamily": "Arial",
+      "justifyContent": "space-between",
+      "maxWidth": "50rem",
+      "padding": "10px",
+      "textAlign": "center",
+    }
+  }
+>
+  <ErrorIcon />
+  <span
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
+    message
+  </span>
+  <button
+    onClick={[MockFunction]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "border": "none",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "marginLeft": "20px",
+        "outline": "none",
+      }
+    }
+  >
+    <CloseIcon />
+  </button>
+</div>
+`;
+
+exports[`should render alert template with InfoIcon 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#304269",
+      "borderRadius": "3px",
+      "boxShadow": "0px 2px 2px 2px rgba(0, 0, 0, 0.03)",
+      "boxSizing": "border-box",
+      "color": "white",
+      "display": "flex",
+      "fontFamily": "Arial",
+      "justifyContent": "space-between",
+      "maxWidth": "50rem",
+      "padding": "10px",
+      "textAlign": "center",
+    }
+  }
+>
+  <InfoIcon />
+  <span
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
+    message
+  </span>
+  <button
+    onClick={[MockFunction]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "border": "none",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "marginLeft": "20px",
+        "outline": "none",
+      }
+    }
+  >
+    <CloseIcon />
+  </button>
+</div>
+`;
+
+exports[`should render alert template with SuccessIcon 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#304269",
+      "borderRadius": "3px",
+      "boxShadow": "0px 2px 2px 2px rgba(0, 0, 0, 0.03)",
+      "boxSizing": "border-box",
+      "color": "white",
+      "display": "flex",
+      "fontFamily": "Arial",
+      "justifyContent": "space-between",
+      "maxWidth": "50rem",
+      "padding": "10px",
+      "textAlign": "center",
+    }
+  }
+>
+  <SuccessIcon />
+  <span
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
+    message
+  </span>
+  <button
+    onClick={[MockFunction]}
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "border": "none",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "marginLeft": "20px",
+        "outline": "none",
+      }
+    }
+  >
+    <CloseIcon />
+  </button>
+</div>
+`;

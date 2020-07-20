@@ -1,0 +1,46 @@
+.page-header {
+    background: $off-white;
+    margin-bottom: $l-size;
+    padding: $m-size 0;
+
+    @include media(phone) {
+      margin-bottom: $m-size;
+    }
+    @include media(sm-phone) {
+      margin-bottom: $s-size;
+    }
+}
+
+.page-header__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header__actions {
+    margin-top: $m-size;
+}
+
+.page-header__title {
+    margin: 0;
+    font-weight: 300;
+    color: $gray;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.page-header__links {
+    :first-child:not(.page-header__link) {
+        margin-right: $xs-size;
+    }
+}
+
+.page-header__link { // team-your snippets link
+    cursor: pointer;
+    margin-right: $ml-size;
+    font-weight: 300;
+    text-decoration: none;
+    outline: none;
+}

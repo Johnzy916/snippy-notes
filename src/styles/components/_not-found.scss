@@ -1,0 +1,29 @@
+.not-found-header {
+  @include media(phone) {
+    font-size: $font-size-md;
+  }
+}
+
+.not-found-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.not-found-image {
+  max-width: 75%;
+  margin: 0 auto;
+
+  @include media(phone) {
+    max-width: 100%;
+  }
+}
+
+.not-found-link {
+  text-decoration: none;
+  font-size: $font-size-lg;
+}
+
+.not-found-link-container {
+  margin-bottom: $l-size;
+}

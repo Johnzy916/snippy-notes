@@ -1,0 +1,19 @@
+{
+  "setupFiles": [
+    "raf/polyfill",
+    "<rootDir>/src/tests/setupTests.js"
+  ],
+  "transform": {
+    "^.+\\.[t|j]sx?$": "babel-jest"
+  },
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "testEnvironment": "jsdom",
+  "moduleFileExtensions": ["js", "jsx", "json"],
+  "moduleDirectories": ["node_modules"],
+  "moduleNameMapper": {
+    "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mocks__/fileMock.js",
+    "\\.(css|less|scss|sass)$": "<rootDir>/src/tests/__mocks__/styleMock.js"
+  }
+}

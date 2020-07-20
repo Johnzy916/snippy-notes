@@ -1,0 +1,11 @@
+.content-container {
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 0 $m-size;
+}
+
+:not(.header):not(.page-header) > .content-container {
+    @include media(phone) {
+        padding: 0;
+    }
+}

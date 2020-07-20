@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render TeamSnippetPage with AddSnippet modules for every team 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container page-header__row"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Team Snippets
+      </h1>
+      <div
+        className="page-header__links"
+      >
+        <Link
+          className="page-header__link"
+          to="/snippets"
+        >
+          Your snippets »
+        </Link>
+        <Link
+          to="/notes"
+        >
+          <button
+            className="btn btn--tertiary btn--shine"
+          >
+            Notes
+          </button>
+        </Link>
+      </div>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div
+      className="team-container"
+      key="team"
+    >
+      <div
+        className="team-container__header"
+      >
+        Team
+      </div>
+      <Connect(AddSnippet)
+        team="team"
+        type="admin"
+      />
+      <Connect(SnippetList)
+        isAdmin={false}
+        team="team"
+      />
+    </div>
+    <div
+      className="team-container"
+      key="team2"
+    >
+      <div
+        className="team-container__header"
+      >
+        Team2
+      </div>
+      <Connect(AddSnippet)
+        team="team2"
+        type="admin"
+      />
+      <Connect(SnippetList)
+        isAdmin={false}
+        team="team2"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render TeamSnippetPage with AddSnippet modules specific teams 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container page-header__row"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Team Snippets
+      </h1>
+      <div
+        className="page-header__links"
+      >
+        <Link
+          className="page-header__link"
+          to="/snippets"
+        >
+          Your snippets »
+        </Link>
+        <Link
+          to="/notes"
+        >
+          <button
+            className="btn btn--tertiary btn--shine"
+          >
+            Notes
+          </button>
+        </Link>
+      </div>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div
+      className="team-container"
+      key="team"
+    >
+      <div
+        className="team-container__header"
+      >
+        Team
+      </div>
+      <Connect(AddSnippet)
+        team="team"
+        type="admin"
+      />
+      <Connect(SnippetList)
+        isAdmin={true}
+        team="team"
+      />
+    </div>
+    <div
+      className="team-container"
+      key="team2"
+    >
+      <div
+        className="team-container__header"
+      >
+        Team2
+      </div>
+      <Connect(SnippetList)
+        isAdmin={false}
+        team="team2"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render TeamSnippetPage without AddSnippet module 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container page-header__row"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Team Snippets
+      </h1>
+      <div
+        className="page-header__links"
+      >
+        <Link
+          className="page-header__link"
+          to="/snippets"
+        >
+          Your snippets »
+        </Link>
+        <Link
+          to="/notes"
+        >
+          <button
+            className="btn btn--tertiary btn--shine"
+          >
+            Notes
+          </button>
+        </Link>
+      </div>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div
+      className="team-container"
+      key="team"
+    >
+      <div
+        className="team-container__header"
+      >
+        Team
+      </div>
+      <Connect(SnippetList)
+        isAdmin={false}
+        team="team"
+      />
+    </div>
+    <div
+      className="team-container"
+      key="team2"
+    >
+      <div
+        className="team-container__header"
+      >
+        Team2
+      </div>
+      <Connect(SnippetList)
+        isAdmin={false}
+        team="team2"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,135 @@
+.btn {
+    border: none;
+    color: $white;
+    display: inline-block;
+    font-size: $font-size-lg;
+    font-weight: 300;
+    line-height: 1;
+    outline: none;
+    overflow: hidden;
+    padding: $s-size $m-size;
+    position: relative;
+    text-decoration: none;
+    transition: color .6s ease-in-out;
+    
+    &::selection {
+        color: $white;
+    }
+    
+    &--primary {
+        @include btn-colors($color-primary);
+    }
+    &--secondary {
+        @include btn-colors($color-secondary);
+    }
+    &--tertiary {
+        @include btn-colors($color-tertiary);
+    }
+    &--gray {
+        @include btn-colors($light-gray);
+    }
+    &--google {
+        @include btn-colors($color-google, 'light');
+        color: $white;
+        &:hover {
+            color: #4285F4;
+        }
+    }
+    &--github {
+        @include btn-colors($color-github);
+    }
+    &--facebook {
+        @include btn-colors($color-facebook);
+    }
+}
+
+// button for admin area
+.btn--admin {
+    margin-right: $m-size;
+}
+    
+// button with no background, animated hover
+.btn--link {
+    background: none;
+    position: relative;
+    z-index: 0;
+    
+    &::before {
+        border: none;
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 3%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: width .2s .2s ease-out, height .2s ease-out;
+        z-index: -1;
+    }
+    
+    &:hover::before {
+        width: 100%;
+        height: 100%;
+        transition: width .2s ease-out, height .2s .2s ease-out;
+    }
+}
+
+.btn--remove {
+    color: $color-primary;
+}
+    
+// add shine effect to button
+.btn--shine {
+    border-radius: .5rem;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+    
+    &:active {
+       top: .2rem;
+       box-shadow: 0 .1rem .1rem -.1rem rgba(0, 0, 0, .3);
+    }
+    
+    &::before,
+    &::after {
+        content: '';
+        width: calc(100% + 4rem);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(-100% - 6rem);
+        transform: skew(-35deg);
+        transition: all .3s;
+    }
+   
+   &::before {
+        transition: left .8s cubic-bezier(0.86, 0, 0.07, 1);
+        z-index: -1;
+   }
+   
+   &::after {
+        transition: left .6s cubic-bezier(0.86, 0, 0.07, 1) .2s;
+        z-index: -2;
+   }
+   
+   &:hover::before {
+       left: calc(0px - 2rem);
+       transition: left .6s cubic-bezier(0.86, 0, 0.07, 1) .2s;
+   }
+   
+   &:hover::after {
+       left: calc(0px - 2rem);
+       transition: left .8s cubic-bezier(0.86, 0, 0.07, 1);
+   }
+
+   &:hover {
+       img {
+           filter: brightness(100%) invert(0);
+       }
+   }
+
+   img {
+       filter: brightness(0%) invert(1);
+       transition: filter .6s ease-out;
+   }
+}

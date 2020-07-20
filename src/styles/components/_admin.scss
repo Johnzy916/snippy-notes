@@ -1,0 +1,141 @@
+.add-admin {
+    padding: $ml-size 0;
+}
+
+.admin-module {
+    margin-bottom: $xl-size;
+}
+
+.admin-section {
+    background: $off-white;
+}
+
+.admin-section__header,
+.admin-section__footer {
+    background: darken($off-white, 5%);
+    text-align: center;
+    color: $color-primary;
+    padding: $xs-size;
+    font-size: $font-size-lg;
+}
+
+.admin-section__footer {
+    color: $light-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chevron-logo-container {
+    display: inline-block;
+    height: 2.2rem;
+    width: 2rem;
+    margin-left: $xs-size;
+
+    svg {
+        fill: $light-gray;
+        transform: rotate(0deg);
+        transition: transform .3s;
+    }
+}
+
+.admin-expandable-area-container {
+    border-left: .5rem solid $off-white;
+    border-right: .5rem solid $off-white;
+    padding: 0;
+    height: auto;
+    overflow: hidden;
+    transition: height .3s ease-out;
+}
+
+.admin-expandable-area__notification {
+    font-size: $font-size-md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color-tertiary, .5);
+    color: white;
+    text-align: center;
+    padding: $xs-size $s-size;
+
+    &--white {
+        @extend .admin-expandable-area__notification;
+        background: $off-white;
+        color: $gray;
+        padding-bottom: $s-size;
+    }
+}
+
+.admin__key-square {
+    width: $l-size;
+    height: $l-size;
+    background: rgba($color-secondary, .3);
+    margin-right: $s-size;
+}
+
+.admin-expandable-area {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: $s-size;
+}
+
+.admin-area__item {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 25%;
+    background: $off-white;
+    padding: $s-size $m-size;
+    margin: $xs-size;
+
+    &--admin {
+        @extend .admin-area__item;
+        background: rgba($color-secondary, .3);
+    }
+}
+
+.admin-area__item-text {
+    margin-right: $s-size;
+    color: $gray;
+}
+
+.admin-area__item-remove {
+    cursor: pointer;
+    font-size: $font-size-md;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 3rem;
+    background: rgba($color-tertiary, .1);
+    transition: all .2s;
+
+    &:hover {
+        background: rgba($color-tertiary, .5);
+        color: $white;
+    }
+}
+
+.add-admin__input-form {
+    @extend .add-team__input-form;
+}
+
+.add-admin__team-name,
+.add-admin__project-name {
+    @extend .add-member__team-name;
+}
+
+.add-admin__input {
+    @include default-input;
+    font-size: $font-size-md;
+    color: $gray;
+    background: $white;
+    flex: 1;
+    margin: 0 $m-size;
+    padding: $s-size;
+    border: none;
+    @include input-highlight($color-secondary);
+}
+

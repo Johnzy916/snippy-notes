@@ -1,0 +1,35 @@
+.input-div {
+  color: $gray;
+  margin: 0;
+  border-radius: 1rem;
+  padding: $m-size;
+  min-height: 40rem;
+  width: 100%;
+  box-shadow: 0 0 .2rem 0 $color-primary;
+  @include input-highlight($color-tertiary);
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: $xl-size;
+}
+
+.input-div__copy-container {
+  position: absolute;
+  bottom: $m-size;
+  right: $s-size;
+  height: $ml-size;
+  width: $ml-size;
+
+  svg {
+    cursor: pointer;
+    fill: $light-gray;
+
+    &:hover {
+      fill: $color-primary;
+    }
+    &:active {
+      transform: translateY(.2rem);
+    }
+  }
+}
