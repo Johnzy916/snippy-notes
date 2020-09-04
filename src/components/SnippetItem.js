@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import DOMPurify from 'dompurify'
 import { startRemoveUserSnippet, startEditUserSnippet } from '../actions/user'
 import { startRemoveTeamSnippet, startEditTeamSnippet } from '../actions/teams'
+import { copyText, pasteText } from '../utils/clipboard'
 
 export const SnippetItem = ({ id, shortcut, text, team, isAdmin, isUser,
                             removeUserSnippet, editUserSnippet,
@@ -22,31 +23,33 @@ export const SnippetItem = ({ id, shortcut, text, team, isAdmin, isUser,
                 }}
                 onCopy={(e) => {
                     e.preventDefault()
-                    e.copyText(e)
+                    copyText(e)
                 }}
                 onPaste={(e) => {
                     e.preventDefault()
-                    e.pasteText(e)
+                    pasteText(e)
                 }}>
                     { shortcut }
             </div>
-            <div className={`li__text`} 
-                data-text={`${id}`} 
-                contentEditable={isUser || isAdmin || isProjectAdmin || isSuperAdmin}
-                onBlur={(e) => {
-                    isUser ?
-                    editUserSnippet(id, { text: DOMPurify.sanitize(e.target.innerHTML) })
-                    : editTeamSnippet(team, id, { text: DOMPurify.sanitize(e.target.innerHTML) })
-                }}
-                onCopy={(e) => {
-                    e.preventDefault()
-                    e.copyText(e)
-                }}
-                onPaste={(e) => {
-                    e.preventDefault()
-                    e.pasteText(e)
-                }}
-                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}>
+            <div className={`li__text-wrapper`}>
+                <div className={`li__text`} 
+                    data-text={`${id}`} 
+                    contentEditable={isUser || isAdmin || isProjectAdmin || isSuperAdmin}
+                    onBlur={(e) => {
+                        isUser ?
+                        editUserSnippet(id, { text: DOMPurify.sanitize(e.target.innerHTML) })
+                        : editTeamSnippet(team, id, { text: DOMPurify.sanitize(e.target.innerHTML) })
+                    }}
+                    onCopy={(e) => {
+                        e.preventDefault()
+                        copyText(e)
+                    }}
+                    onPaste={(e) => {
+                        e.preventDefault()
+                        pasteText(e)
+                    }}
+                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}>
+                </div>
             </div>
             {
                 // only show delete button if user type

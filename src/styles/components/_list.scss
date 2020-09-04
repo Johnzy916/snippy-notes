@@ -30,18 +30,12 @@
     background: $white;
     padding: $xs-size $s-size;
     outline: none;
-    transition: box-shadow .2s;
-
-    &:focus {
-        box-shadow: 0 0 .2rem .2rem $color-secondary;
-    }
 
     // make team snippets non-selectable
     &:not([contenteditable=true]) {
         user-select: none;
     }
 
-    // add margin unless remove button is gone (team page)
     &:not(:last-child) {
         margin-right: $m-size;
     }
@@ -50,17 +44,50 @@
 .li__shortcut {
     min-width: 10%;
     flex: 1 0 0;
+    transition: box-shadow .2s;
+
+    &:focus {
+        box-shadow: 0 0 .2rem .2rem $color-secondary;
+    }
+}
+
+.li__text-wrapper {
+    min-width: 20%;
+    flex: 5 0 0;
+    position: relative;
+    padding: 0;
+    transition: box-shadow .2s;
+
+    &::after { // gradient
+        content: '';
+        position: absolute;
+        bottom: .7rem;
+        left: 0;
+        background: linear-gradient(to bottom, transparent, white);
+        height: 4rem;
+        width: calc(100% - 1.7rem);
+        pointer-events: none;
+    }
+
+    // add margin unless remove button is gone (team page)
+    &:not(:last-child) {
+        margin-right: $m-size;
+    }
 }
 
 .li__text {
-    min-width: 20%;
-    flex: 5 0 0;
     overflow-y: auto;
+    overflow-x: hidden;
     max-height: 20rem;
     transition: max-height .2s;
+    outline: none;
+    width: 100%;
+    transition: all .2s;
+    padding-bottom: 2rem; // compensate for gradient
 
     &:focus {
         max-height: 50rem;
+        box-shadow: 0 0 .2rem .2rem $color-secondary;
     }
 }
 

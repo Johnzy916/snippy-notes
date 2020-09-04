@@ -1,8 +1,9 @@
 export const copyText = async (e, tooltipRef) => {
     // remove extra lines, if any before writing to clipboard
-    let content = e.target.innerText ?
-                  e.target.innerText.replace(/\n\n/gm, '\n') :
-                  e.target.closest('.input-container').firstElementChild.innerText.replace(/\n\n/gm, '\n')
+    const selection = window.getSelection().toString()
+
+    let content = selection || e.target.closest('.input-container').innerText.replace(/\n\n/gm, '\n') || ''
+
     try {
         await navigator.clipboard.writeText(content)
     } catch (error) {
