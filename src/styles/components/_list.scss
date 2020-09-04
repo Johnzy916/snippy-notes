@@ -55,6 +55,13 @@
 .li__text {
     min-width: 20%;
     flex: 5 0 0;
+    overflow-y: auto;
+    max-height: 20rem;
+    transition: max-height .2s;
+
+    &:focus {
+        max-height: 50rem;
+    }
 }
 
 .list-item__message {
