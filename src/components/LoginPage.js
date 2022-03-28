@@ -19,6 +19,11 @@ export const LoginPage = ({ startLogin }) => {
                         />
                         Login with Google
                 </button>
+                <input></input>
+                <input></input>
+                <button>
+
+                </button>
             </div>
         </div>
     )
