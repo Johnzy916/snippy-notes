@@ -98,7 +98,7 @@ export const AddAdmins = ({ addAdmin, removeAdmin, projectAdmins, isProjectAdmin
               )
             }
             <input className="add-admin__input add-admin__email"
-                placeholder="Google account email"
+                placeholder="Account email"
                 contentEditable >
             </input>
             <button className="btn btn--secondary btn--shine btn--add"

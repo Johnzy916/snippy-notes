@@ -12,25 +12,45 @@ export const LoginPage = ({ startLogin }) => {
                 <p className="box-layout__tagline">Take notes, save, and expand snippets with ease!</p>
                 <button
                     className="btn btn--google btn--shine box-layout__button"
-                    onClick={() => startLogin('google')}>
+                    onClick={(e) => startLogin(e, 'google')}>
                         <img
                             className="box-layout__button-logo google-logo"
                             src={ googleLogo } alt="google logo"
                         />
                         Login with Google
                 </button>
-                <input></input>
-                <input></input>
-                <button>
-
+                <form 
+                    className='box-layout__form'
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        startLogin(e, 'email');
+                    }}
+                >
+                <input
+                    type="text"
+                    name="email"
+                    defaultValue="admintester@snippynotes.com"
+                    readOnly
+                />
+                <input 
+                    type="password"
+                    name="password"
+                    defaultValue="@TestPassword1"
+                    readOnly
+                />
+                <button
+                    className='btn btn--tertiary btn--shine box-layout__button'
+                >
+                    Log in as Admin
                 </button>
+                </form>
             </div>
         </div>
     )
 }
 
 const mapDispatchToProps = dispatch => ({
-    startLogin: () => dispatch(startLogin())
+    startLogin: (e, type) => dispatch(startLogin(e, type))
 });
 
 export default connect(undefined, mapDispatchToProps)(LoginPage)

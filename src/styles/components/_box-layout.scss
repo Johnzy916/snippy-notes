@@ -84,3 +84,17 @@
     width: 3rem;
     height: 3rem;
 }
+
+.box-layout__form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    input {
+        padding: 1em;
+        margin-bottom: $xs-size;
+        width: 100%;
+        border: 2px solid $color-tertiary;
+        border-radius: 5px;
+    }
+}

@@ -28,6 +28,7 @@ export const startSetUserRole = (user) => {
             try {
                 // else, check if they're a project admin
                 projectSnapshot = await db.doc(`projects/${project}`).get()
+                console.log('user.email: ')
                 if (projectSnapshot.exists && projectSnapshot.data().admins.includes(user.email)) {
                     return dispatch(setUserRole('projectAdmin'))
                 }

@@ -85,7 +85,7 @@ export const AddTeam = ({ addTeam, allTeams, removeTeam, isSuperAdmin,
                   contentEditable >
               </input>
               <input className="add-team__input add-team__admin"
-                  placeholder="Team admin (Google email)"
+                  placeholder="Team admin email"
                   contentEditable>
               </input>
               <button className="btn btn--secondary btn--shine btn--add"

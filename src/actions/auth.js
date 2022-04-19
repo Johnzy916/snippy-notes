@@ -3,10 +3,14 @@ import {
     googleAuthProvider,
 } from '../firebase/firebase'
 
-export const startLogin = () => {
+export const startLogin = (e, type) => {
     return async () => {
       try {
-        await firebase.auth().signInWithPopup(googleAuthProvider);
+        if (type == 'google') {
+          await firebase.auth().signInWithPopup(googleAuthProvider);
+        } else {
+          await firebase.auth().signInWithEmailAndPassword(e.target.elements.email.value,e.target.elements.password.value);
+        }
       }
       catch(error) {
         var errorMessage = error.message;

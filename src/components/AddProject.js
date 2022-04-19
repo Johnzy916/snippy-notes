@@ -85,7 +85,7 @@ export const AddProject = ({ addProject, allProjects, removeProject,
                   contentEditable >
               </input>
               <input className="add-team__input add-project__admin"
-                  placeholder="Project admin (Google email)"
+                  placeholder="Project admin email"
                   contentEditable>
               </input>
               <button className="btn btn--secondary btn--shine btn--add"

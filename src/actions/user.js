@@ -6,10 +6,14 @@ const db = firebase.firestore()
 export const startSetUserData = (user) => {
     return async (dispatch, getState) => {
         const uid = getState().auth.uid
-        let userDoc
+        let userDoc;
         // set user name and email to state
-        dispatch(setUserName(user.displayName.split(' ')[0]))
-        dispatch(setUserEmail(user.email))
+        if (user?.displayName) {
+            dispatch(setUserName(user.displayName.split(' ')[0]));
+        }
+        if (user?.email) {
+            dispatch(setUserEmail(user.email));
+        }
         // get user data for setting initial state
         try {
             userDoc = await db.doc(`users/${uid}`).get()

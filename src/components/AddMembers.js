@@ -105,7 +105,7 @@ export const AddMembers = ({ isTeamAdmin, currentTeam, addMember, setTeam, isDat
               )
             }
             <input className="add-member__input add-member__email"
-                placeholder="Google account email"
+                placeholder="Account email"
                 contentEditable >
             </input>
             <button className="btn btn--secondary btn--shine btn--add"

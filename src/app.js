@@ -42,6 +42,7 @@ render(<LoadingPage />, document.getElementById('app'));
 
 // change of login state
 firebase.auth().onAuthStateChanged(async (user) => {
+  console.log('user: ', user)
   const curPath = history.location.pathname;
 
   // USER IS LOGGED IN
