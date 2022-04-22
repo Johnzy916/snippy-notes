@@ -4,7 +4,7 @@
   "description": "A simple notes app. Take notes, save, and expand snippets with ease.",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url ./",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json --runInBand",
     "test:watch": "cross-env NODE_ENV=test jest --config=jest.config.json --runInBand --watchAll",
     "start": "parcel index.html --open"
