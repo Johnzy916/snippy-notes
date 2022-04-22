@@ -1,5 +1,4 @@
 import firebase from 'firebase/app'
-import 'firebase/analytics'
 import 'firebase/firestore'
 import 'firebase/auth'
 
@@ -11,13 +10,11 @@ const firebaseConfig = {
   projectId: "snippy-notes",
   storageBucket: "snippy-notes.appspot.com",
   messagingSenderId: "48224930094",
-  appId: "1:48224930094:web:3adfc8bcce5d1376c352bf",
-  measurementId: "G-LCQBFMCFDK"
+  appId: "1:48224930094:web:3adfc8bcce5d1376c352bf"
 }
 
 // initialize firebase
 firebase.initializeApp(firebaseConfig)
-process.env.NODE_ENV === 'test' || firebase.analytics() // jest throwing unhandled rejection error
 
 // fix firestore connection issues
 firebase.firestore().settings({ experimentalForceLongPolling: true })
