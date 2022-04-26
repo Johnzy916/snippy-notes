@@ -21,10 +21,10 @@ export const Header = ({ startLogout, userName, isProjectAdmin,
             {
               ((isProjectAdmin || isSuperAdmin) ||
               (isTeamAdmin && isTeamAdmin.length > 0)) &&
-              pathname !== `/admin` ? (
+              pathname !== `/projects/snippynotes/app/admin` ? (
                 <Link
                   className="btn--admin"
-                  to={`/admin`} >
+                  to={`/projects/snippynotes/app/admin`} >
                     <button className="btn btn--secondary btn--shine">
                       Admin &#187;
                     </button>

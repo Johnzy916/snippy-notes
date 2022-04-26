@@ -55,14 +55,14 @@ firebase.auth().onAuthStateChanged(async (user) => {
       renderApp()
     } else {
       renderApp()
-      history.push(`/notes`)
+      history.push(`/projects/snippynotes/app/notes`)
       dispatchData(user, store)
     }
 
   // USER IS NOT LOGGED IN
   } else {
     renderApp()
-    history.push(`/`)
+    history.push(`/projects/snippynotes/app/`)
     store.dispatch(logout())
   }
 })

@@ -19,7 +19,7 @@ export const PrivateRoute = ({
                     />
                 </div>
             ) : (
-                <Redirect to={`/`} />
+                <Redirect to={`/projects/snippynotes/app/`} />
             )
         )} />
     )
