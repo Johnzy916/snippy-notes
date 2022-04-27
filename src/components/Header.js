@@ -14,7 +14,7 @@ export const Header = ({ startLogout, userName, isProjectAdmin,
         <div className="header__content">
           <Link
             className="header__title"
-            to="/notes">
+            to="/projects/snippynotes/app/notes">
               <h1>Snippy Notes</h1><span className="beta-tag">BETA</span>
           </Link>
           <div>

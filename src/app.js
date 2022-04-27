@@ -62,7 +62,7 @@ firebase.auth().onAuthStateChanged(async (user) => {
   // USER IS NOT LOGGED IN
   } else {
     renderApp()
-    history.push(`/projects/snippynotes/app/`)
+    history.push(`/projects/snippynotes/app`)
     store.dispatch(logout())
   }
 })

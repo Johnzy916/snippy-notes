@@ -13,7 +13,7 @@ const NotesPage = () => (
         </h1>
         <div className="page-header__links">
           <Link
-            to="/snippets">
+            to="/projects/snippynotes/app/snippets">
               <button className="btn btn--tertiary btn--shine">
                 Snippets
               </button>

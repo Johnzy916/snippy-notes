@@ -7,9 +7,8 @@
     "build": "parcel build index.html --public-url ./",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json --runInBand",
     "test:watch": "cross-env NODE_ENV=test jest --config=jest.config.json --runInBand --watchAll",
-    "start": "parcel index.html --open"
+    "start": "parcel index.html --public-url /projects/snippynotes/app --open"
   },
-  "homepage": "https://angusdev.com/projects/snippynotes/app",
   "dependencies": {
     "dompurify": "^2.0.11",
     "dotenv": "^8.2.0",
@@ -45,10 +44,6 @@
     "redux-mock-store": "^1.5.4"
   },
   "sideEffects": false,
-  "browserslist": [
-    "> 1%",
-    "not dead"
-  ],
   "keywords": [
     "notes",
     "notetaking",
