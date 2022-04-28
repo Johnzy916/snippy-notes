@@ -24,7 +24,7 @@ export const SnippetPage = ({ userTeams, teamSnippets, isSuperAdmin, isProjectAd
               </Link>
           }
           <Link
-            to="/notes">
+            to="/projects/snippynotes/app/notes">
               <button className="btn btn--tertiary btn--shine">
                 Notes
               </button>
