@@ -20,11 +20,11 @@ const AppRouter = () => (
 
       <Switch>
         {/* <PublicRoute path="/" component={WelcomePage} exact={true} /> */}
-        <PublicRoute path="/projects/snippynotes/app" component={LoginPage} exact={true} />
-        <PrivateRoute path="/projects/snippynotes/app/notes" component={NotesPage} />
-        <PrivateRoute path="/projects/snippynotes/app/snippets" component={SnippetPage} />
-        <PrivateRoute path="/projects/snippynotes/app/team" component={TeamSnippetPage} />
-        <AdminRoute path="/projects/snippynotes/app/admin" component={AdminPage} />
+        <PublicRoute path="/snippy-notes" component={LoginPage} exact={true} />
+        <PrivateRoute path="/snippy-notes/notes" component={NotesPage} />
+        <PrivateRoute path="/snippy-notes/snippets" component={SnippetPage} />
+        <PrivateRoute path="/snippy-notes/team" component={TeamSnippetPage} />
+        <AdminRoute path="/snippy-notes/admin" component={AdminPage} />
         <Route component={NotFoundPage} />
       </Switch>
 

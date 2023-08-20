@@ -17,7 +17,7 @@ const NotFoundPage = () => (
             src={ image404 } alt="page not found"
         />
     <div className="center-all not-found-link-container">
-      <Link className="not-found-link" to="/projects/snippynotes/app">Get me out of here</Link>
+      <Link className="not-found-link" to="/snippy-notes">Get me out of here</Link>
     </div>
     </div>
   </div>

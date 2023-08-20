@@ -17,11 +17,11 @@ export const TeamSnippetPage = ({ isTeamAdmin, teamSnippets,
             <div className="page-header__links">
               <Link
                 className="page-header__link"
-                to="/projects/snippynotes/app/snippets">
+                to="/snippy-notes/snippets">
                 Your snippets &#187;
               </Link>
               <Link
-                to="/projects/snippynotes/app/notes">
+                to="/snippy-notes/notes">
                   <button className="btn btn--tertiary btn--shine">
                     Notes
                   </button>

@@ -17,13 +17,13 @@ export const AdminPage = ({ isProjectAdmin, isTeamAdmin, allTeams, teamMembers,
         </h1>
         <div className="page-header__links">
           <Link
-            to="/projects/snippynotes/app/notes">
+            to="/snippy-notes/notes">
               <button className="btn btn--tertiary btn--shine">
                 Notes
               </button>
           </Link>
           <Link
-            to="/projects/snippynotes/app/snippets">
+            to="/snippy-notes/snippets">
               <button className="btn btn--tertiary btn--shine">
                 Snippets
               </button>

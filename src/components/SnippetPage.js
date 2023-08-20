@@ -19,12 +19,12 @@ export const SnippetPage = ({ userTeams, teamSnippets, isSuperAdmin, isProjectAd
             ((isSuperAdmin || isProjectAdmin) && Object.keys(teamSnippets).length > 0)) &&
               <Link
                 className="page-header__link"
-                to="/projects/snippynotes/app/team">
+                to="/snippy-notes/team">
                 Team snippets &#187;
               </Link>
           }
           <Link
-            to="/projects/snippynotes/app/notes">
+            to="/snippy-notes/notes">
               <button className="btn btn--tertiary btn--shine">
                 Notes
               </button>

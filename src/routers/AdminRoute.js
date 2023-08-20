@@ -25,7 +25,7 @@ export const AdminRoute = ({
             ) : (
                 // need a second to grab the state if reloading on page
                 setTimeout(() => {
-                    <Redirect to={`/projects/snippynotes/app`} />
+                    <Redirect to={`/snippy-notes`} />
                 }, 1000)
             )
         )} />

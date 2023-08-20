@@ -7,10 +7,11 @@
     "build": "parcel build index.html --public-url ./",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json --runInBand",
     "test:watch": "cross-env NODE_ENV=test jest --config=jest.config.json --runInBand --watchAll",
-    "start": "parcel index.html --public-url /projects/snippynotes/app --open",
+    "start": "parcel index.html --public-url /snippy-notes --open",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://johnzy916.github.io/snippy-notes",
   "dependencies": {
     "dompurify": "^2.0.11",
     "dotenv": "^8.2.0",
